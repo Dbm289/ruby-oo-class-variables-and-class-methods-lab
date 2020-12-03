@@ -40,8 +40,9 @@ class Song
         #binding.pry
         artist_count = {}
         self.artists.each do |musician|
-            artist_count[musician] = @@artists.filter{|a| a == musician}.length
             #binding.pry
+            artist_count[musician] = @@artists.filter{|a| a == musician}.length
+            
             
         end
 
@@ -52,12 +53,14 @@ class Song
     def self.genre_count
         genre_count = {}
         self.genres.each do |style|
-            binding.pry
+            #binding.pry
             genre_count[style] = @@genres.filter{|a| a == style}.length
         end
 
+        genre_count
+
     end
 
-    genre_count
+    
 
 end
